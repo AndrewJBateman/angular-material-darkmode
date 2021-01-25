@@ -1,24 +1,70 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { OverlayContainer } from '@angular/cdk/overlay';
-import { SampleDialogComponent } from "./sample-dialog/sample-dialog.component";
+import { SampleDialogComponent } from './sample-dialog/sample-dialog.component';
+import { Router } from '@angular/router';
+import { Subject, Observable } from 'rxjs';
+import { takeUntil, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'Angular material dark mode';
+
+  private unsubscribe$ = new Subject<void>();
+  cities = ['London', 'Paris', 'Madrid', 'Moscow', 'New York', 'Karachi', 'Sydney'];
+  // countries = [
+  //   {
+  //     name: 'United Kingdom',
+  //     cities: ['London', 'Warwick', 'Birmingham'],
+  //   },
+  //   {
+  //     name: 'United States',
+  //     cities: ['New York', 'Chicago', 'Washington'],
+  //   },
+  //   {
+  //     name: 'Australia',
+  //     cities: ['Sydney', 'Adelaide', 'Melbourne'],
+  //   },
+  //   {
+  //     name: 'Pakistan',
+  //     cities: ['Lahore', 'Karachi', 'Islamabad'],
+  //   },
+  // ];
+  countryControl: FormControl;
+  cityControl: FormControl;
+
+  cities$: Observable<string>;
+  city = '';
 
   @HostBinding('class') className = '';
 
   toggleControl = new FormControl(false);
 
-  constructor(private dialog: MatDialog, private overlay: OverlayContainer) { }
+  constructor(
+    private router: Router,
+    private dialog: MatDialog,
+    private overlay: OverlayContainer
+  ) {}
 
   ngOnInit(): void {
+    this.cityControl = new FormControl('');
+    this.cityControl.valueChanges
+      .pipe(takeUntil(this.unsubscribe$))
+      .subscribe((value) => {
+        this.router.navigate([value]);
+      });
+
+    // this.countryControl = new FormControl('');
+
+    // this.cities$ = this.countryControl.valueChanges.pipe(
+    //   map((country) => country.cities)
+    // );
+
     this.toggleControl.valueChanges.subscribe((darkMode) => {
       const darkClassName = 'darkMode';
       this.className = darkMode ? darkClassName : '';
@@ -30,11 +76,14 @@ export class AppComponent implements OnInit {
     });
   }
 
-  showDialog(): void {
-    this.dialog.open(SampleDialogComponent,
-      {
-        width: '500px'
-      });
+  ngOnDestroy() {
+    this.unsubscribe$.next();
+    this.unsubscribe$.complete();
   }
 
+  showDialog(): void {
+    this.dialog.open(SampleDialogComponent, {
+      width: '500px',
+    });
+  }
 }
