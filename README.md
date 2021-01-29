@@ -25,7 +25,8 @@
 
 ## :camera: Screenshots
 
-![Example screenshot](./img/table+rows-clicked.png)
+![Example screenshot](./img/weather.png)
+![Example screenshot](./img/dark.png)
 
 ## :signal_strength: Technologies
 
@@ -33,6 +34,7 @@
 * [Angular Material v11](https://material.angular.io/)
 * [RxJS takeUntil](https://www.learnrxjs.io/learn-rxjs/operators/filtering/takeuntil) used to emit values until provided observable limits - until $Unsubscribe in this case
 * [RxJS Subject](https://www.learnrxjs.io/learn-rxjs/subjects/subject#a-special-type-of-observable-which-shares-a-single-execution-path-among-observers) used to share an execution path among observers
+* [RxJS Filter](https://www.learnrxjs.io/learn-rxjs/operators/filtering/filter) to emit only selected values
 
 ## :floppy_disk: Setup
 
@@ -43,18 +45,36 @@
 
 ## :computer: Code Examples
 
-```html
+```typescript
+  // Function that takes a city name as input and returns an Observable using a Weather interface
+  getWeatherForCity(city: string): Observable<Weather> {
+    const params = new HttpParams({ fromObject: { q: city } });
 
+    return this.httpGet<Weather>('weather', params).pipe(
+      map((data: Weather) => ({
+        ...data,
+        image: `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`,
+      })),
+      delay(500)
+    );
+  }
+
+  private httpGet<T>(url: string, params: HttpParams): Observable<T> {
+    params = params.append('appid', environment.apiKey);
+    params = params.append('lang', 'en');
+    params = params.append('units', 'metric');
+    return this.http.get<T>(`${this.baseUrl}/data/2.5/weather`, { params });
+  }
 ```
 
 ## :cool: Features
 
-* tba
+* dark mode toggle
 
 ## :clipboard: Status & To-Do List
 
 * Status: Working.
-* To-Do: Add components etc.
+* To-Do: Add Unsplash image of clouds etc. - depending on API weather response
 
 ## :clap: Inspiration
 

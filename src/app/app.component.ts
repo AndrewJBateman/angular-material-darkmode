@@ -17,24 +17,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private unsubscribe$ = new Subject<void>();
   cities = ['London', 'Paris', 'Madrid', 'Moscow', 'New York', 'Karachi', 'Sydney'];
-  // countries = [
-  //   {
-  //     name: 'United Kingdom',
-  //     cities: ['London', 'Warwick', 'Birmingham'],
-  //   },
-  //   {
-  //     name: 'United States',
-  //     cities: ['New York', 'Chicago', 'Washington'],
-  //   },
-  //   {
-  //     name: 'Australia',
-  //     cities: ['Sydney', 'Adelaide', 'Melbourne'],
-  //   },
-  //   {
-  //     name: 'Pakistan',
-  //     cities: ['Lahore', 'Karachi', 'Islamabad'],
-  //   },
-  // ];
   countryControl: FormControl;
   cityControl: FormControl;
 
@@ -59,12 +41,7 @@ export class AppComponent implements OnInit, OnDestroy {
         this.router.navigate([value]);
       });
 
-    // this.countryControl = new FormControl('');
-
-    // this.cities$ = this.countryControl.valueChanges.pipe(
-    //   map((country) => country.cities)
-    // );
-
+    // dark-mode toggle
     this.toggleControl.valueChanges.subscribe((darkMode) => {
       const darkClassName = 'darkMode';
       this.className = darkMode ? darkClassName : '';

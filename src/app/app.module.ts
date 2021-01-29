@@ -22,9 +22,11 @@ import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { WeatherReportComponent } from './weather-report/weather-report.component';
 import { AppRoutingModule } from "./app-routing.module";
+import { SvgSunComponent } from './components/svg-sun/svg-sun.component';
+import { SvgMoonComponent } from './components/svg-moon/svg-moon.component';
 
 @NgModule({
-  declarations: [AppComponent, SampleDialogComponent, WeatherReportComponent],
+  declarations: [AppComponent, SampleDialogComponent, WeatherReportComponent, SvgSunComponent, SvgMoonComponent],
   imports: [
     AppRoutingModule,
     HttpClientModule,

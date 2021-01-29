@@ -11,7 +11,7 @@
 }
 
 mat-card {
-  width: 250px;
+  width: 300px;
 }
 
 mat-card::ng-deep.mat-card-header-text {
@@ -30,11 +30,11 @@ mat-card::ng-deep.mat-card-header-text {
 
   > .outlook {
       color: black;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(93, 169, 231, 0.1);
   }
 
   > .temp {
-      background: lightblue;
+      background: rgb(133, 235, 172);
       color: black;
       margin-right: 10px;
       display: flex;
@@ -49,6 +49,6 @@ mat-card::ng-deep.mat-card-header-text {
   }
 
   .image {
-      height: 80px;
+      height: 70px;
   }
 }
