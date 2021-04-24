@@ -7,7 +7,7 @@ import { map, filter, concatMap, tap } from 'rxjs/operators';
 @Component({
   selector: 'app-weather-report',
   templateUrl: './weather-report.component.html',
-  styleUrls: ['./weather-report.component.scss']
+  styleUrls: ['./weather-report.component.scss'],
 })
 export class WeatherReportComponent implements OnInit {
   data$: Observable<any>;
@@ -17,23 +17,21 @@ export class WeatherReportComponent implements OnInit {
   constructor(
     private weatherService: WeatherService,
     private route: ActivatedRoute
-  ) { }
+  ) {}
 
   // on init params is an array {locationName: 'Paris'}
   ngOnInit() {
     this.data$ = this.route.params.pipe(
-      map(params => params.locationName),
-      filter(name => !!name),
+      map((params) => params.locationName),
+      filter((name) => !!name),
       tap(() => {
         this.loading = true;
       }),
-      concatMap(
-        name => this.weatherService.getWeatherForCity(name)
-      ),
+      concatMap((name) => this.weatherService.getWeatherForCity(name)),
       tap(() => {
         this.loading = false;
       }),
-      tap(data => console.log('data', data))
+      tap((data) => console.log('data', data))
     );
   }
 }

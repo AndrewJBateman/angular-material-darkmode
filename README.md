@@ -17,11 +17,15 @@
   * [:cool: Features](#cool-features)
   * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
+  * [:file_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
 
 * [Angular standard dark theme](https://material.angular.io/guide/theming) used
+* [RxJS takeUntil](https://www.learnrxjs.io/learn-rxjs/operators/filtering/takeuntil) used to emit values until provided observable limits - until $Unsubscribe in this case
+* [RxJS Subject](https://www.learnrxjs.io/learn-rxjs/subjects/subject#a-special-type-of-observable-which-shares-a-single-execution-path-among-observers) used to share an execution path among observers
+* [RxJS Filter](https://www.learnrxjs.io/learn-rxjs/operators/filtering/filter) to emit only selected values
 
 ## :camera: Screenshots
 
@@ -32,14 +36,12 @@
 
 * [Angular v11](https://angular.io/)
 * [Angular Material v11](https://material.angular.io/)
-* [RxJS takeUntil](https://www.learnrxjs.io/learn-rxjs/operators/filtering/takeuntil) used to emit values until provided observable limits - until $Unsubscribe in this case
-* [RxJS Subject](https://www.learnrxjs.io/learn-rxjs/subjects/subject#a-special-type-of-observable-which-shares-a-single-execution-path-among-observers) used to share an execution path among observers
-* [RxJS Filter](https://www.learnrxjs.io/learn-rxjs/operators/filtering/filter) to emit only selected values
+* [RxJS v6](https://rxjs-dev.firebaseapp.com/guide/overview)
 
 ## :floppy_disk: Setup
 
 * Install dependencies using `npm i`
-* Sign up with [OpenWeather API](https://home.openweathermap.org/), get a free API key and add it to the environment files
+* Sign up with [OpenWeather API](https://home.openweathermap.org/), get a free API key and add it to the `environment.ts` files
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 * Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
@@ -81,6 +83,10 @@
 * [Angular Material Darkmode in 3 Steps](https://zoaibkhan.com/blog/angular-material-dark-mode-in-3-steps/)
 * [Angular Weather App RxJS in Angular](https://zoaibkhan.com/blog/rxjs-in-angular-creating-a-weather-app/)
 
+## :file_folder: License
+
+* This project is licensed under the terms of the MIT license.
+
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://www.andrewbateman.org) - you are welcome to [send me a message](https://andrewbateman.org/contact)
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com

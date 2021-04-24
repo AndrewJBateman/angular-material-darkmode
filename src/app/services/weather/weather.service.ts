@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { map, delay, tap } from 'rxjs/operators';
+import { map, delay } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
-import { query } from '@angular/animations';
-import { Weather } from "src/app/interfaces/weather";
+import { Weather } from 'src/app/interfaces/weather';
 
 @Injectable({ providedIn: 'root' })
 export class WeatherService {
