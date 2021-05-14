@@ -40,7 +40,7 @@
 
 * [Angular v12](https://angular.io/)
 * [Angular Material v12](https://material.angular.io/)
-* [RxJS v6](https://rxjs-dev.firebaseapp.com/guide/overview)
+* [RxJS v7](https://rxjs-dev.firebaseapp.com/guide/overview)
 
 ## :floppy_disk: Setup
 
@@ -79,7 +79,7 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working.
+* Status: Working. Updated may 2021
 * To-Do: Add Unsplash image of clouds etc. - depending on API weather response
 
 ## :clap: Inspiration
