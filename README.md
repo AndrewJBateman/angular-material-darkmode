@@ -2,8 +2,12 @@
 
 * App displays weather from the [OpenWeather API](https://home.openweathermap.org/)
 * Uses the [Angular Material design component library](https://material.angular.io/) to add a dark mode
+* **Note:** to open web links in a new window use: _ctrl+click on link_
 
-*** Note: to open web links in a new window use: _ctrl+click on link_**
+![GitHub repo size](https://img.shields.io/github/repo-size/AndrewJBateman/angular-material-darkmode?style=plastic)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/AndrewJBateman/angular-material-darkmode?style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/AndrewJBateman/angular-material-darkmode?style=plastic)
+![GitHub last commit](https://img.shields.io/github/last-commit/AndrewJBateman/angular-material-darkmode?style=plastic)
 
 ## :page_facing_up: Table of contents
 
@@ -34,7 +38,7 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v11](https://angular.io/)
+* [Angular v12](https://angular.io/)
 * [Angular Material v11](https://material.angular.io/)
 * [RxJS v6](https://rxjs-dev.firebaseapp.com/guide/overview)
 
