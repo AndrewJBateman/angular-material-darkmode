@@ -20,7 +20,7 @@ export class WeatherReportComponent implements OnInit {
   ) {}
 
   // on init params is an array {locationName: 'Paris'}
-  ngOnInit() {
+  ngOnInit(): void {
     this.data$ = this.route.params.pipe(
       map((params) => params.locationName),
       filter((name) => !!name),
@@ -31,7 +31,7 @@ export class WeatherReportComponent implements OnInit {
       tap(() => {
         this.loading = false;
       }),
-      tap((data) => console.log('data', data))
+      tap((data) => console.log('weather data', data))
     );
   }
 }

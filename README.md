@@ -39,7 +39,7 @@
 ## :signal_strength: Technologies
 
 * [Angular v12](https://angular.io/)
-* [Angular Material v11](https://material.angular.io/)
+* [Angular Material v12](https://material.angular.io/)
 * [RxJS v6](https://rxjs-dev.firebaseapp.com/guide/overview)
 
 ## :floppy_disk: Setup
