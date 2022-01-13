@@ -38,8 +38,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v12](https://angular.io/)
-* [Angular Material v12](https://material.angular.io/)
+* [Angular v13](https://angular.io/)
+* [Angular Material v13](https://material.angular.io/)
 * [RxJS v7](https://rxjs-dev.firebaseapp.com/guide/overview)
 
 ## :floppy_disk: Setup
@@ -76,10 +76,11 @@
 ## :cool: Features
 
 * dark mode toggle
+* stylish weather card
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working. Updated may 2021
+* Status: Working.
 * To-Do: Add Unsplash image of clouds etc. - depending on API weather response
 
 ## :clap: Inspiration
