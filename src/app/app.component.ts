@@ -1,5 +1,5 @@
 import { Component, HostBinding, OnDestroy, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { SampleDialogComponent } from './sample-dialog/sample-dialog.component';
@@ -17,15 +17,15 @@ export class AppComponent implements OnInit, OnDestroy {
 
   private unsubscribe$ = new Subject<void>();
   cities = ['London', 'Paris', 'Madrid', 'Moscow', 'New York', 'Karachi', 'Sydney'];
-  countryControl: FormControl;
-  cityControl: FormControl;
+  countryControl: UntypedFormControl;
+  cityControl: UntypedFormControl;
 
   cities$: Observable<string>;
   city = '';
 
   @HostBinding('class') className = '';
 
-  toggleControl = new FormControl(false);
+  toggleControl = new UntypedFormControl(false);
 
   constructor(
     private router: Router,
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    this.cityControl = new FormControl('');
+    this.cityControl = new UntypedFormControl('');
     this.cityControl.valueChanges
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe((value) => {
