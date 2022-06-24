@@ -38,8 +38,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v13](https://angular.io/)
-* [Angular Material v13](https://material.angular.io/)
+* [Angular v14](https://angular.io/)
+* [Angular Material v14](https://material.angular.io/)
 * [RxJS v7](https://rxjs-dev.firebaseapp.com/guide/overview)
 
 ## :floppy_disk: Setup
@@ -80,8 +80,8 @@
 
 ## :clipboard: Status & To-Do List
 
-* Status: Working.
-* To-Do: Add Unsplash image of clouds etc. - depending on API weather response
+* Status: Working
+* To-Do: Nothing
 
 ## :clap: Inspiration
 
