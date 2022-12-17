@@ -38,14 +38,14 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v14](https://angular.io/)
-* [Angular Material v14](https://material.angular.io/)
+* [Angular v15](https://angular.io/)
+* [Angular Material v15](https://material.angular.io/)
 * [RxJS v7](https://rxjs-dev.firebaseapp.com/guide/overview)
 
 ## :floppy_disk: Setup
 
 * Install dependencies using `npm i`
-* Sign up with [OpenWeather API](https://home.openweathermap.org/), get a free API key and add it to the `environment.ts` files
+* Sign up with [OpenWeather API](https://home.openweathermap.org/), get a (hopefully) free API key and add it to the `environment.ts` files
 * Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 * Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
@@ -94,4 +94,4 @@
 
 ## :envelope: Contact
 
-* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@yahoo.com
+* Repo created by [ABateman](https://github.com/AndrewJBateman), email: gomezbateman@gmail.com
