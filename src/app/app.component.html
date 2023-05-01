@@ -8,7 +8,7 @@
 </mat-toolbar>
 
 <div class="content mat-app-background">
-  <mat-form-field>
+  <mat-form-field appearance="fill">
     <mat-label>Select city</mat-label>
     <mat-select [formControl]="cityControl">
       <mat-option *ngFor="let city of cities" [value]="city">
@@ -47,21 +47,6 @@
 
     <h1>Checkbox</h1>
     <mat-checkbox>Check this box!</mat-checkbox>
-
-    <br /><br />
-
-    <h1>Expansion panel</h1>
-    <mat-expansion-panel hideToggle>
-      <mat-expansion-panel-header>
-        <mat-panel-title> This is the expansion title </mat-panel-title>
-        <mat-panel-description>
-          This is a summary of the content
-        </mat-panel-description>
-      </mat-expansion-panel-header>
-      <p>This is the primary content of the panel.</p>
-    </mat-expansion-panel>
-
-    <br /><br />
   </div>
   <div fxFlex="50">
     <h1>A card</h1>

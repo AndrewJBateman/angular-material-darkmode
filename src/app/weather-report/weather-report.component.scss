@@ -1,21 +1,12 @@
-:host {
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
 .top-bar {
   position: absolute;
   left: 0;
   top: 0;
 }
 
-mat-card {
+.weather-card {
   width: 300px;
-}
-
-mat-card::ng-deep.mat-card-header-text {
-  width: 100%;
+  margin: auto auto;
 }
 
 .flex-row {
