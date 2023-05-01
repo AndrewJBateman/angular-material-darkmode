@@ -15,16 +15,16 @@ export interface Weather {
   cod: number;
 }
 
-interface CloudsInterface {
+export interface CloudsInterface {
   all: number;
 }
 
-interface CoordinatesInterface {
+export interface CoordinatesInterface {
   lon: number;
   lat: number;
 }
 
-interface MainInterface {
+export interface MainInterface {
   temp: number;
   feels_like: number;
   temp_min: number;
@@ -33,11 +33,11 @@ interface MainInterface {
   humidity: number;
 }
 
-interface RainInterface {
+export interface RainInterface {
   '1h': number;
 }
 
-interface SysInterface {
+export interface SysInterface {
   type: number;
   id: number;
   country: string;
@@ -45,14 +45,14 @@ interface SysInterface {
   sunset: number;
 }
 
-interface WeatherInterface {
+export interface WeatherInterface {
   id: number;
   main: string;
   description: string;
   icon: string;
 }
 
-interface WindInterface {
+export interface WindInterface {
   speed: number;
   deg: number;
 }
