@@ -12,16 +12,16 @@
 ## :page_facing_up: Table of contents
 
 * [:zap: Angular Material Table](#zap-angular-material-table)
-  * [:page_facing_up: Table of contents](#page_facing_up-table-of-contents)
+  * [:page\_facing\_up: Table of contents](#page_facing_up-table-of-contents)
   * [:books: General info](#books-general-info)
   * [:camera: Screenshots](#camera-screenshots)
-  * [:signal_strength: Technologies](#signal_strength-technologies)
-  * [:floppy_disk: Setup](#floppy_disk-setup)
+  * [:signal\_strength: Technologies](#signal_strength-technologies)
+  * [:floppy\_disk: Setup](#floppy_disk-setup)
   * [:computer: Code Examples](#computer-code-examples)
   * [:cool: Features](#cool-features)
-  * [:clipboard: Status & To-Do List](#clipboard-status--to-do-list)
+  * [:clipboard: Status \& To-Do List](#clipboard-status--to-do-list)
   * [:clap: Inspiration](#clap-inspiration)
-  * [:file_folder: License](#file_folder-license)
+  * [:file\_folder: License](#file_folder-license)
   * [:envelope: Contact](#envelope-contact)
 
 ## :books: General info
@@ -38,8 +38,8 @@
 
 ## :signal_strength: Technologies
 
-* [Angular v15](https://angular.io/)
-* [Angular Material v15](https://material.angular.io/)
+* [Angular v16](https://angular.io/)
+* [Angular Material v16](https://material.angular.io/)
 * [RxJS v7](https://rxjs-dev.firebaseapp.com/guide/overview)
 
 ## :floppy_disk: Setup
@@ -81,7 +81,7 @@
 ## :clipboard: Status & To-Do List
 
 * Status: Working
-* To-Do: Nothing
+* To-Do: Correct 5 type errors "Property 'main' does not exist on type 'unknown'."
 
 ## :clap: Inspiration
 
